@@ -3,7 +3,7 @@ import { programs } from '../Data/Data'
 
 const ProgramList = () => {
   return (
-  <div>
+  <div className='mx-5'>
     <div className=' text-3xl text-white font-bold text-center py-4'>
         Our Programs
     </div>

@@ -8,7 +8,7 @@ const TopBar = () => {
     <div className=" shadow-sm relative ">
       <div className="p-2 flex justify-between items-center relative">
         <div className="flex items-center gap-3">
-          <h1 className='md:ml-50 font-bold text-2xl text-lime-400 '>FitZone</h1>
+          <h1 className='md:ml-20 font-bold text-3xl text-lime-400 '>FitZone</h1>
         </div>
 
         <div className="md:hidden absolute right-3 top-3">
@@ -43,7 +43,7 @@ const TopBar = () => {
           <a href="#">Contact</a>
         </div>
 
-        <div className="hidden mr-50 md:flex gap-4 ">
+        <div className="hidden mr-20 md:flex gap-4 ">
           <button className="bg-lime-400 font-semibold w-25 h-10 rounded-xl">Join Now</button>
         </div>
       </div>

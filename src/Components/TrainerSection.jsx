@@ -2,7 +2,7 @@ import React from 'react'
 import { trainers } from '../Data/Data'
 const TrainerSection = () => {
   return (
-    <div className="py-10">
+    <div className="py-10 mx-5">
      <h2 className="text-3xl font-bold text-white text-center py-4">
      Meet Our Trainers
      </h2>
