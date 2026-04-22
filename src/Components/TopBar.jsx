@@ -26,7 +26,7 @@ const TopBar = () => {
         </div>
 
         {open && (
-          <div className="absolute top-14 right-3 left-3 black p-4 flex flex-col gap-4 text-sm md:hidden bg-amber-200">
+          <div className="absolute top-14 right-3 left-3 black p-4 flex flex-col gap-4 text-sm md:hidden bg-gray-800 rounded-lg">
             <a href="#" className="text-white">Home</a>
             <a href="#" className="text-white">Programs</a>
             <a href="#" className="text-white">Trainers</a>
