@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { menuLinks } from "../Data/Data";
 
 const TopBar = () => {
   const [open, setOpen] = useState(false);
@@ -26,25 +27,29 @@ const TopBar = () => {
         </div>
 
         {open && (
-          <div className="absolute top-14 right-3 left-3 black p-4 flex flex-col gap-4 text-sm md:hidden bg-gray-800 rounded-lg">
-            <a href="#" className="text-white">Home</a>
-            <a href="#" className="text-white">Programs</a>
-            <a href="#" className="text-white">Trainers</a>
-            <a href="#" className="text-white">Pricing</a>
-            <a href="#" className="text-white">Contact</a>
-          </div>
+        <div className="md:hidden px-4 pb-4 flex flex-col gap-3">
+          {menuLinks.map((link, index) => (
+            <a key={index} href={link.href} className="text-gray-700">
+              {link.name}
+            </a>
+          ))}
+        </div>
         )}
       
         <div className="hidden md:flex gap-6 text-gray-400">
-          <a href="#">Home</a>
-          <a href="#">Program</a>
-          <a href="#">Trainer</a>
-          <a href="#">Pricing</a>
-          <a href="#">Contact</a>
+           {menuLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className="text-gray-700 hover:text-lime-400"
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
 
         <div className="hidden mr-20 md:flex gap-4 ">
-          <button className="bg-lime-400 font-semibold w-25 h-10 rounded-xl">Join Now</button>
+          <button className="bg-lime-400 -semiboldfont w-25 h-10 rounded-xl">Join Now</button>
         </div>
       </div>
     </div>
