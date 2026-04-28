@@ -14,7 +14,7 @@ const ProgrammingTracks = ({ state, close }) => {
         </div>
         <div> 
             <p className="text-3xl text-white ">Start coding with structured begginer-friendly lessons</p>
-            <span className="text-gray-400">Here is a demo overview of programming courses studens can start today, form web basic to React projects</span>
+            <span className="text-gray-400">Here is a demo overview of programming courses studens can start today, form web basic to React projects a </span>
           </div>
         <div className="flex flex-row flex-wrap gap-5">
           {programmingCourses.map((item) => (
