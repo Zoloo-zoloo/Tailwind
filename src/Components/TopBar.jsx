@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { menuLinks } from "../Data/Data";
 
-const TopBar = () => {
+const TopBar = ({ openSignUp, openLogin }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -50,6 +50,20 @@ const TopBar = () => {
 
         <div className="hidden mr-20 md:flex gap-4 ">
           <button className="bg-lime-400 -semiboldfont w-25 h-10 rounded-xl">Join Now</button>
+        </div>
+        <div className="hidden md:flex gap-3">
+          <button
+            className="px-4 py-2 bg-white rounded-lg"
+            onClick={openSignUp}
+          >
+            Sign Up
+          </button>
+          <button
+            onClick={openLogin}
+            className="px-4 py-2 bg-indigo-600 text-white rounded-lg"
+          >
+            Login
+          </button>
         </div>
       </div>
     </div>
