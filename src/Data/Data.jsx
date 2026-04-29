@@ -85,9 +85,8 @@ export const trainers = [
     },
 ];
 
-export const authContext = [
-    {
-        id: "signup",
+export const authContent = {
+    signup: {
         eyebrow: "Join FitZone",
         title: "Register for your program",
         description:
@@ -96,14 +95,13 @@ export const authContext = [
         secondaryText: "Already a member?",
         secondaryAction: "Login",
         fields: [
-            { label: "Full Name", type: "text", placeholder: "Enter your full name" },
+            { label: " Full Name", type: "text", placeholder: "Enter your full name" },
             { label: "Email", type: "email", placeholder: "Enter your email" },
             { label: "Preferred Program", type: "text", placeholder: "Strength Training" },
             { label: "Password", type: "password", placeholder: "Create a password" },
         ],
     },
-    {
-        id: "login",
+    login: {
         eyebrow: "Welcome Back",
         title: "Login to your fitness account",
         description:
@@ -116,6 +114,6 @@ export const authContext = [
             { label: "Password", type: "password", placeholder: "Enter your password" },
         ],
     },
-];
+};
 
 export const footerItems = ["About", "Classes", "Membership", "Support"];

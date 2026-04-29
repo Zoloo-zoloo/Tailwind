@@ -9,7 +9,7 @@ const TopBar = ({ openSignUp, openLogin }) => {
     <div className=" shadow-sm relative ">
       <div className="p-2 flex justify-between items-center relative">
         <div className="flex items-center gap-3">
-          <h1 className='md:ml-20 font-bold text-3xl text-lime-400 '>FitZone</h1>
+          <h1 className='font-bold text-3xl text-lime-400 '>FitZone</h1>
         </div>
 
         <div className="md:hidden absolute right-3 top-3">
@@ -26,46 +26,54 @@ const TopBar = ({ openSignUp, openLogin }) => {
           )}
         </div>
 
-        {open && (
-        <div className="md:hidden px-4 pb-4 flex flex-col gap-3">
-          {menuLinks.map((link, index) => (
-            <a key={index} href={link.href} className="text-gray-700">
-              {link.name}
-            </a>
-          ))}
-        </div>
-        )}
-      
         <div className="hidden md:flex gap-6 text-gray-400">
            {menuLinks.map((link, index) => (
             <a
               key={index}
               href={link.href}
-              className="text-gray-700 hover:text-lime-400"
+              className="text-gray-200 hover:text-lime-400"
             >
               {link.name}
             </a>
           ))}
         </div>
-
-        <div className="hidden mr-20 md:flex gap-4 ">
-          <button className="bg-lime-400 -semiboldfont w-25 h-10 rounded-xl">Join Now</button>
-        </div>
         <div className="hidden md:flex gap-3">
           <button
-            className="px-4 py-2 bg-white rounded-lg"
+            className="bg-lime-400 -semiboldfont w-25 h-10 rounded-xl"
             onClick={openSignUp}
           >
-            Sign Up
+            Join Now
           </button>
           <button
             onClick={openLogin}
-            className="px-4 py-2 bg-indigo-600 text-white rounded-lg"
+            className="py-2 bg-gray-900 -semiboldfont w-20 h-10 rounded-xl text-white"
           >
             Login
           </button>
         </div>
       </div>
+
+      {open && (
+      <div className="md:hidden absolute left-0 top-full p-4 flex flex-col gap-3 bg-gray-800 shadow-lg w-full rounded-lg z-10">
+        {menuLinks.map((link, index) => (
+          <a key={index} href={link.href} className="text-gray-200 hover:text-lime-400">
+            {link.name}
+          </a>
+        ))}
+        <button
+          className="bg-lime-400 font-semibold w-full h-10 rounded-xl"
+          onClick={openSignUp}
+        >
+          Join Now
+        </button>
+        <button
+          onClick={openLogin}
+          className="py-2 bg-gray-900 font-semibold w-full h-10 rounded-xl text-white"
+        >
+          Login
+        </button>
+      </div>
+      )}
     </div>
   );
 };

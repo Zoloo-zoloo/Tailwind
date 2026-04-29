@@ -29,9 +29,9 @@ const FitnessPage = () => {
         }
       />
       <Intro open={() => setIsOpen(true)} />
-      <ProgramListList />
+      <ProgramList />
       <TrainerSection />
-      <BottomFooterFooter />
+      <BottomFooter />
     </div>
   );
 };
