@@ -22,7 +22,7 @@ const ProgrammingTracks = ({ state, close }) => {
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <p>{item.lessons}</p>
-              <p>{item.schedule}</p>
+              <p>{item.schedule}</p>a
               <p></p>
               <div>
                 {item.highlights.map((high, id) => (
