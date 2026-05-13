@@ -1,17 +1,32 @@
-import React, { useState } from 'react'
+﻿import React, { useState } from 'react'
 import TopBar from '../Components/TopBar'
 import Intro from '../Components/Intro'
 import ProgramList from '../Components/ProgramList'
 import TrainerSection from '../Components/TrainerSection'
 import BottomFooter from '../Components/BottomFooter'
-import ProgrammingTracks from '../Components/StartTodayButton'
+import Addprogram from '../Components/Addprogram'
 import AuthModal from '../Components/AuthModal'
 import ProgramButton from '../Components/ProgramButton'
+import { programmingCourses } from '../Data/Data'
 
 const FitnessPage = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [addOpen, setAddOpen] = useState(false)
   const [authOpen, setAuthOpen] = useState(false)
   const [programsOpen, setProgramsOpen] = useState(false)
+  const [activePrograms, setActivePrograms] = useState([])
+
+  const addProgram = (program) => {
+    setActivePrograms((current) => {
+      if (current.some((item) => item.id === program.id)) {
+        return current
+      }
+      return [...current, program]
+    })
+  }
+
+  const removeProgram = (programId) => {
+    setActivePrograms((current) => current.filter((program) => program.id !== programId))
+  }
 
   return (
     <div>
@@ -20,8 +35,21 @@ const FitnessPage = () => {
         openLogin={() => setAuthOpen('login')}
         openPrograms={() => setProgramsOpen(true)}
       />
-      <ProgramButton open={programsOpen} close={() => setProgramsOpen(false)} />
-      <ProgrammingTracks state={isOpen} close={() => setIsOpen(false)} />
+      <ProgramButton
+        open={programsOpen}
+        close={() => setProgramsOpen(false)}
+        activePrograms={activePrograms}
+        availablePrograms={programmingCourses}
+        onRemove={removeProgram}
+        onOpenAdd={() => setAddOpen(true)}
+      />
+      <Addprogram
+        open={addOpen}
+        close={() => setAddOpen(false)}
+        availablePrograms={programmingCourses}
+        activePrograms={activePrograms}
+        onAdd={addProgram}
+      />
       <AuthModal
         mode={authOpen}
         open={authOpen}
@@ -32,7 +60,7 @@ const FitnessPage = () => {
           )
         }
       />
-      <Intro open={() => setIsOpen(true)} />
+      <Intro open={() => setAddOpen(true)} />
       <ProgramList />
       <TrainerSection />
       <BottomFooter />

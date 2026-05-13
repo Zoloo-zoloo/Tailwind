@@ -11,16 +11,19 @@ export const menuLinks = [
 
 export const programs = [
     {
+        id: "strength-training",
         title: "Strength Training",
         description: "Build muscle and improve your full body strength.",
         icon: "🏋️",
     },
     {
+        id: "yoga-class",
         title: "Yoga Class",
         description: "Increase flexibility and relax your mind and body.",
         icon: "🧘",
     },
     {
+        id: "cardio-workout",
         title: "Cardio Workout",
         description: "Boost endurance and improve heart health.",
         icon: "🏃",
@@ -29,45 +32,54 @@ export const programs = [
 
 export const programmingCourses = [
     {
-        id: 1,
-        title: "HTML & CSS Foundations",
-        duration: "4 weeks",
-        lessons: "12 lessons",
-        level: "Beginner",
-        description:
-            "Learn how websites are structured and styled by building clean page layouts, cards, buttons, and responsive sections.",
-        highlights: [
-            "Create real page sections with HTML",
-            "Style layouts with modern CSS",
-            "Practice responsive design basics",
-        ],
-    },
-    {
-        id: 2,
-        title: "JavaScript Starter Lab",
-        duration: "5 weeks",
-        lessons: "15 lessons",
-        level: "Beginner to Intermediate",
-        description:
-            "Understand variables, functions, arrays, and DOM events by making interactive mini features that feel like real apps.",
-        highlights: [
-            "Work with click events and forms",
-            "Build small interactive widgets",
-            "Strengthen problem-solving logic",
-        ],
-    },
-    {
-        id: 3,
-        title: "React UI Builder",
+        id: "strength-training",
+        title: "Strength Training",
+        icon: "🏋️",
+        coach: "Alex Morgan",
+        progress: "2 of 12 sessions completed",
         duration: "6 weeks",
-        lessons: "18 lessons",
-        level: "Intermediate",
+        sessions: "18 guided sessions",
+        schedule: "Mon, Wed, Fri",
         description:
-            "Turn ideas into reusable components and connect them into a polished frontend experience with practical React workflows.",
+            "Build strength step by step with structured workouts that improve balance, power, and overall body control.",
         highlights: [
-            "Build reusable components",
-            "Pass props and manage simple state",
-            "Create a demo portfolio-ready project",
+            "Full-body starter strength routine",
+            "Safe form practice with coach guidance",
+            "Weekly progress tracking plan",
+        ],
+    },
+    {
+        id: "yoga-class",
+        title: "Yoga Class",
+        icon: "🧘",
+        coach: "Sophie Lee",
+        progress: "3 of 12 sessions completed",
+        duration: "5 weeks",
+        sessions: "15 guided sessions",
+        schedule: "Tue, Thu",
+        description:
+            "Improve flexibility and recovery with calm sessions focused on movement quality, breathing, and posture.",
+        highlights: [
+            "Stretching and mobility flow",
+            "Breathing techniques for recovery",
+            "Beginner-friendly balance practice",
+        ],
+    },
+    {
+        id: "cardio-workout",
+        title: "Cardio Workout",
+        icon: "🏃",
+        coach: "Mia Chen",
+        progress: "1 of 10 sessions completed",
+        duration: "4 weeks",
+        sessions: "12 guided sessions",
+        schedule: "Weekend plan",
+        description:
+            "Boost endurance with energetic cardio training designed to keep workouts motivating and easy to follow.",
+        highlights: [
+            "Short high-energy cardio blocks",
+            "Heart-rate focused conditioning",
+            "Simple home workout format",
         ],
     },
 ];
